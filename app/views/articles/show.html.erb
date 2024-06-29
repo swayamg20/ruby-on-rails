@@ -1,0 +1,22 @@
+<h1><%= @article.title %></h1>
+
+<button class="button-6">
+    <%= link_to "Edit", edit_article_path(@article) %>
+</button>
+<button class="button-6">
+    <%= link_to "Delete", 
+    article_path(@article), 
+    data: {
+            turbo_method: :delete,
+            turbo_confirm: "Are you sure?"
+        } %>
+</button>
+
+<button class="button-6">
+    <%= link_to "Home", root_path %>
+</button>
+ 
+
+<p><%= @article.body %></p>
+
+
